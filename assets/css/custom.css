@@ -302,7 +302,7 @@ a, .btn-link {
     background-color: #FF9800;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 0;
+    border-radius: 4px;
     height: 32px;
 }
 
