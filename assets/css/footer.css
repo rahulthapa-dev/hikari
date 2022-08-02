@@ -157,11 +157,12 @@ footer .container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: start;
-    justify-content: flex-start;
+    justify-content: flex-end;
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    max-width: 600px;
   }
   @media only screen and (max-width: 767px) {
     .block-site-footer__detail {
@@ -185,7 +186,7 @@ footer .container {
   }
   .block-site-footer__social:not(:first-of-type) svg {
     height: 24px;
-    margin-left: 16px;
+    margin-left: 5px;
   }
   .block-site-footer__colophon .legacy-post .block-page-content em,
   .block-site-footer__colophon p,
@@ -266,6 +267,7 @@ footer .container {
     font-weight: 400;
     color: #4a4a4a;
     margin-left: 20px;
+    padding: 8px 0;
   }
   .block-site-footer__colophon p {
     font-size: 14px !important;
