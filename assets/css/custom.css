@@ -820,6 +820,9 @@ a:-webkit-any-link {
   left: 0;
   width: 100%;
 }
+.accordion-body p {
+  color: #19191c;
+}
 /*  media query */
 @media only screen and (min-width: 48rem) {
   .container-custom {
