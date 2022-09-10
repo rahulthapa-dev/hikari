@@ -47,27 +47,27 @@ $("input:checkbox").on('click', function() {
   }
 });
 
-//need this to deactivate lightbox on small screens
-$(document).ready(function () {
-  lightboxOnResize();
-});
 
-$(window).resize(function() {
-  lightboxOnResize();
-});
 
 //***ISOTOPE***
 // init Isotope
-var $grid = $('.grid').isotope({
-  itemSelector: '.grid-item',
-  layoutMode: 'masonry'
-});
-
-// filter items on button click
+setTimeout(function() {
+  var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    layoutMode: 'masonry',
+    masonry: {
+      fitWidth: true, // When enabled, you can center the container with CSS.
+    }
+  });
+  // filter items on button click
 $('.filter-button-group').on( 'click', 'button', function() {
   var filterValue = $(this).attr('data-filter');
   $grid.isotope({ filter: filterValue });
 });
+
+}, 200);
+
+
 
 
 // change is-checked class on buttons
@@ -78,21 +78,3 @@ $('.btn-group').each( function( i, buttonGroup ) {
     $( this ).addClass('is-checked');
   });
 });
-
-function lightboxOnResize() {
-  if ($(window).width() < 768) {
-    $('a[rel="prettyPhoto[portfolio]"]')
-      .removeAttr('rel')
-      .addClass('lightboxRemoved');
-      $('a.lightboxRemoved').click(function( event ) {
-        event.preventDefault();
-        console.log("test");
-      });
-     // $("a[rel='prettyPhoto[portfolio]']").unbind('click');
-  } else {
-    $('a.lightboxRemoved').attr('rel', 'prettyPhoto[portfolio]').removeClass("lightboxRemoved");
-    $("a[rel='prettyPhoto[portfolio]']").prettyPhoto({
-      theme: "light_square",
-    });
-  }
-}

@@ -25,7 +25,7 @@
 <body>
     <nav  id="header" class="navbar navbar-expand-xl headroom header-custom" aria-label="navbar">
         <div class="container-fluid">
-          <a class="d-none navbar-brand d-md-flex align-items-end hikari-logo order-2 order-xl-1" href="#">
+          <a class="d-none navbar-brand d-md-flex align-items-end hikari-logo order-2 order-xl-1" href="index.html">
             <svg width="50" height="55" viewBox="0 0 721 768" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M721 0H0V768H721V0ZM680.5 42H45.5V724H680.5V42Z"
                   fill="currentColor" />
@@ -35,6 +35,9 @@
               </svg>
               <span class="ms-2"><span class="text-red">Hikari</span> <br/>Scripts</span>
           </a>
+          <a class="d-inline-block navbar-brand text-center me-0 d-md-none align-items-end hikari-logo order-2 order-xl-1" href="index.html">
+            <span class=""><span class="text-red">Hikari</span>Scripts</span>
+        </a>
           <div class="d-inline-flex align-items-center order-3">
             <div class="d-inline-block me-1">
                 <input type="checkbox" class="checkbox" id="checkbox">
@@ -82,16 +85,16 @@
                         <a class="nav-link" href="#">LIST-BOARD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">RECORD</a>
+                        <a class="nav-link" href="record.html">RECORD</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">AUTHORS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">QUESTIONNAIRE</a>
+                        <a class="nav-link" href="questionnaire.html">QUESTIONNAIRE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GALLERY</a>
+                        <a class="nav-link" href="gallery.html">GALLERY</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">MAGAZINE</a>
@@ -108,7 +111,7 @@
     <!-- off canvas -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="leftOffcanvas" aria-labelledby="leftOffcanvasLabel">
         <div class="offcanvas-header">
-            <a class="navbar-brand d-flex align-items-end hikari-logo" href="#">
+            <a class="navbar-brand d-flex align-items-end hikari-logo" href="index.html">
                 <svg width="50" height="55" viewBox="0 0 721 768" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M721 0H0V768H721V0ZM680.5 42H45.5V724H680.5V42Z"
                       fill="currentColor" />
@@ -123,50 +126,35 @@
               </button>
         </div>
         <div class="offcanvas-body">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Homepage</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">ANIME-MANGA</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">GAMES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">WRITER’s PEN</a>
-                </li> -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#">LIST-BOARD</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">RECORD</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">AUTHORS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">QUESTIONNAIRE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">GALLERY</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">MAGAZINE</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">USER PROFILE</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">READING SECTION</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">EDIT USER PROFILE</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">SIGNUP</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">ANIME-MANGA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">GAMES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">WRITER’s PEN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">LIST-BOARD</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">RECORD</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">AUTHORS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">QUESTIONNAIRE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">GALLERY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">MAGAZINE</a>
+            </li>
+        </ul>
             <div class="side-social">
               <h6><strong>Connect With Us</strong></h6>
               <a href="#" class="icon" alt="find us on Discord" target="_blank">
@@ -222,11 +210,12 @@
         <div>
             <div class="fixed-option-c">
                 <i class="lar la-heart"></i>
+                <div class="label-count bg-danger position-relative">1</div>
             </div>
         </div>
     </div>
     <!--  -->
-    <section class="inner-banner justify-content-center align-items-center d-flex" style="background-image: url('assets/img/img1.jpg');">
+    <section class="inner-banner justify-content-center align-items-center d-flex">
       <div class="banner-picture">
         <img src="assets/img/banner.jpeg" alt="">
       </div>
@@ -239,12 +228,12 @@
     </section>
 
     <section class="py-5">
-        <div class="container-small">
+        <div class="container-small pt-5">
             <div class="row">
                 <div class="col-md-12 text-center px-lg-5">
                     <h2 class="blog-title">Here's Where You Can Find Pet-Friendly Apartments in Singapore</h2>
                     <div class="blog-meta">
-                        <a href="">Singapor</a>
+                        <a href="" class="badge badge-success">Singapor</a>
                         <span>•</span>
                         <span>July 29, 2022 </span>
                     </div>
@@ -411,7 +400,7 @@
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">RECORD</a>
+                      href="record.html">RECORD</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
@@ -419,11 +408,11 @@
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">QUESTIONNAIRE</a>
+                      href="questionnaire.html">QUESTIONNAIRE</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">GALLERY</a>
+                      href="gallery.html">GALLERY</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a

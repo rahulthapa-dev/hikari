@@ -25,7 +25,7 @@
 <body>
     <nav  id="header" class="navbar navbar-expand-xl headroom header-custom" aria-label="navbar">
         <div class="container-fluid">
-          <a class="d-none navbar-brand d-md-flex align-items-end hikari-logo order-2 order-xl-1" href="#">
+          <a class="d-none navbar-brand d-md-flex align-items-end hikari-logo order-2 order-xl-1" href="index.html">
             <svg width="50" height="55" viewBox="0 0 721 768" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M721 0H0V768H721V0ZM680.5 42H45.5V724H680.5V42Z"
                   fill="currentColor" />
@@ -35,6 +35,9 @@
               </svg>
               <span class="ms-2"><span class="text-red">Hikari</span> <br/>Scripts</span>
           </a>
+          <a class="d-inline-block navbar-brand text-center me-0 d-md-none align-items-end hikari-logo order-2 order-xl-1" href="index.html">
+            <span class=""><span class="text-red">Hikari</span>Scripts</span>
+        </a>
           
             <div class="d-inline-flex align-items-center order-3">
                 <div class="d-inline-block me-1">
@@ -66,7 +69,7 @@
             <button class=" btn-offcanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#leftOffcanvas" aria-controls="leftOffcanvas">
                 <i class="las la-ellipsis-v"></i>
             </button>
-            <button data-bs-toggle="offcanvas" data-bs-target="#filterHead" aria-controls="filterHead" class="filter-head btn btn-primary-soft order-2 d-inline-block d-md-none position-relative">Filter</button>
+            <button data-bs-toggle="offcanvas" data-bs-target="#filterHead" aria-controls="filterHead" class="filter-head btn btn-dark order-2 d-inline-block d-md-none position-relative"><i class="las la-filter"></i></button>
           </div>
             <div class="collapse navbar-collapse order-2" id="hikari">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
@@ -83,16 +86,16 @@
                         <a class="nav-link" href="#">LIST-BOARD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">RECORD</a>
+                        <a class="nav-link" href="record.html">RECORD</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">AUTHORS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">QUESTIONNAIRE</a>
+                        <a class="nav-link" href="questionnaire.html">QUESTIONNAIRE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GALLERY</a>
+                        <a class="nav-link" href="gallery.html">GALLERY</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">MAGAZINE</a>
@@ -106,7 +109,7 @@
     <!-- off canvas -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="leftOffcanvas" aria-labelledby="leftOffcanvasLabel">
         <div class="offcanvas-header">
-            <a class="navbar-brand d-flex align-items-end hikari-logo" href="#">
+            <a class="navbar-brand d-flex align-items-end hikari-logo" href="index.html">
                 <svg width="50" height="55" viewBox="0 0 721 768" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M721 0H0V768H721V0ZM680.5 42H45.5V724H680.5V42Z"
                       fill="currentColor" />
@@ -122,49 +125,34 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Homepage</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ANIME-MANGA</a>
-              </li>
-              <!-- <li class="nav-item">
-                  <a class="nav-link" href="#">GAMES</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">WRITER’s PEN</a>
-              </li> -->
-              <li class="nav-item">
-                  <a class="nav-link" href="#">LIST-BOARD</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">RECORD</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">AUTHORS</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">QUESTIONNAIRE</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">GALLERY</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">MAGAZINE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">USER PROFILE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">READING SECTION</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">EDIT USER PROFILE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">SIGNUP</a>
-              </li>
-          </ul>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">ANIME-MANGA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">GAMES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">WRITER’s PEN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">LIST-BOARD</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">RECORD</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">AUTHORS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">QUESTIONNAIRE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">GALLERY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">MAGAZINE</a>
+            </li>
+        </ul>
           <div class="side-social">
             <h6><strong>Connect With Us</strong></h6>
             <a href="#" class="icon" alt="find us on Discord" target="_blank">
@@ -308,61 +296,73 @@
                 <a href="" class="btn btn-primary-soft justify-content-center">Filter</a>
               </div>
               <div class="card-content">
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header position-relative" id="panelsStayOpen-headingOne">
-                      <div class="accordion-button justify-content-between" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                        <span class="d-block">What are some random questions to ask?</span>
-                        <button class="ms-3 btn btn-success btn-sm">Answer</button>
+                
+                <div class="accordion" id="questionnaire">
+                  <div class="accordion-item position-relative">
+                    <h2 class="accordion-header" id="headingOne">
+                      <div>
+                        <div class="accordion-button justify-content-between" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
+                          <span class="d-block w-100">What are some random questions to ask?</span>
+                          <button class="me-3 btn btn-primary-soft">Answer</button>
+                        </div>
+                        <label for="" class="position-absolute label-head d-inline-block badge bg-anime mb-0 fw-normal">Anime</label>
                       </div>
-                      <label for="" class="position-absolute label-head d-inline-block badge bg-danger mb-0 fw-normal">Anime</label>
                     </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#questionnaire">
                       <div class="accordion-body">
                         <label for="" class="badge badge-custom">john_doe</label>
                         <label for="" class="badge badge-custom">jinna_doe</label>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header position-relative" id="panelsStayOpen-headingTwo">
-                      <div class="accordion-button justify-content-between" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
-                        <span class="d-block">What are some random questions to ask?</span>
-                        <button class="ms-3 btn btn-success btn-sm">Answer</button>
+                  <!--  -->
+                  <div class="accordion-item position-relative">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <div>
+                        <div class="accordion-button justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
+                          <span class="d-block w-100">What are some random questions to ask?</span>
+                          <button class="me-3 btn btn-primary-soft">Answer</button>
+                        </div>
+                        <label for="" class="position-absolute label-head d-inline-block badge bg-games mb-0 fw-normal">Games</label>
                       </div>
-                      <label for="" class="position-absolute label-head d-inline-block badge bg-success mb-0 fw-normal">Games</label>
                     </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#questionnaire">
                       <div class="accordion-body">
                         <label for="" class="badge badge-custom">john_doe</label>
                         <label for="" class="badge badge-custom">jinna_doe</label>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header position-relative" id="panelsStayOpen-headingThree">
-                      <div class="accordion-button justify-content-between" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
-                        <span class="d-block">What are some random questions to ask?</span>
-                        <button class="ms-3 btn btn-success btn-sm">Answer</button>
+                  <!--  -->
+                  <div class="accordion-item position-relative">
+                    <h2 class="accordion-header" id="headingThree">
+                      <div>
+                        <div class="accordion-button justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
+                          <span class="d-block w-100">What are some random questions to ask?</span>
+                          <button class="me-3 btn btn-primary-soft">Answer</button>
+                        </div>
+                        <label for="" class="position-absolute label-head d-inline-block badge bg-writer mb-0 fw-normal">Writer's Pen</label>
                       </div>
-                      <label for="" class="position-absolute label-head d-inline-block badge bg-info mb-0 fw-normal">Writer's Pen</label>
                     </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#questionnaire">
                       <div class="accordion-body">
                         <label for="" class="badge badge-custom">john_doe</label>
                         <label for="" class="badge badge-custom">jinna_doe</label>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header position-relative" id="panelsStayOpen-headingFour">
-                      <div class="accordion-button justify-content-between" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
-                        <span class="d-block">What are some random questions to ask?</span>
-                        <button class="ms-3 btn btn-success btn-sm">Answer</button>
+                  <!--  -->
+                  <div class="accordion-item position-relative">
+                    <h2 class="accordion-header" id="headingFour">
+                      <div>
+                        <div class="accordion-button justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-controls="collapseFour">
+                          <span class="d-block w-100">What are some random questions to ask?</span>
+                          <button class="me-3 btn btn-primary-soft">Answer</button>
+                        </div>
+                        <label for="" class="position-absolute label-head d-inline-block badge bg-manga mb-0 fw-normal">Manga</label>
                       </div>
-                      <label for="" class="position-absolute label-head d-inline-block badge bg-danger mb-0 fw-normal">Manga</label>
                     </h2>
-                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#questionnaire">
                       <div class="accordion-body">
                         <label for="" class="badge badge-custom">john_doe</label>
                         <label for="" class="badge badge-custom">jinna_doe</label>
@@ -422,7 +422,7 @@
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">RECORD</a>
+                      href="record.html">RECORD</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
@@ -430,11 +430,11 @@
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">QUESTIONNAIRE</a>
+                      href="questionnaire.html">QUESTIONNAIRE</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">GALLERY</a>
+                      href="gallery.html">GALLERY</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a

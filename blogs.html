@@ -25,7 +25,7 @@
 <body>
     <nav class="navbar navbar-expand-xl" aria-label="Fourth navbar example">
         <div class="container-fluid">
-            <a class="d-none navbar-brand d-md-flex align-items-end hikari-logo order-2 order-xl-1" href="#">
+            <a class="d-none navbar-brand d-md-flex align-items-end hikari-logo order-2 order-xl-1" href="index.html">
             <svg width="50" height="55" viewBox="0 0 721 768" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M721 0H0V768H721V0ZM680.5 42H45.5V724H680.5V42Z"
                   fill="currentColor" />
@@ -35,6 +35,9 @@
               </svg>
               <span class="ms-2"><span class="text-red">Hikari</span> <br/>Scripts</span>
           </a>
+          <a class="d-inline-block navbar-brand text-center me-0 d-md-none align-items-end hikari-logo order-2 order-xl-1" href="index.html">
+            <span class=""><span class="text-red">Hikari</span>Scripts</span>
+        </a>
           <div class="d-inline-flex align-items-center order-3">
             <div class="d-inline-block me-1">
                 <input type="checkbox" class="checkbox" id="checkbox">
@@ -82,16 +85,16 @@
                         <a class="nav-link" href="#">LIST-BOARD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">RECORD</a>
+                        <a class="nav-link" href="record.html">RECORD</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">AUTHORS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">QUESTIONNAIRE</a>
+                        <a class="nav-link" href="questionnaire.html">QUESTIONNAIRE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GALLERY</a>
+                        <a class="nav-link" href="gallery.html">GALLERY</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">MAGAZINE</a>
@@ -103,7 +106,7 @@
             <!-- off canvas -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="leftOffcanvas" aria-labelledby="leftOffcanvasLabel">
                 <div class="offcanvas-header">
-                    <a class="navbar-brand d-flex align-items-end hikari-logo" href="#">
+                    <a class="navbar-brand d-flex align-items-end hikari-logo" href="index.html">
                         <svg width="50" height="55" viewBox="0 0 721 768" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M721 0H0V768H721V0ZM680.5 42H45.5V724H680.5V42Z"
                               fill="currentColor" />
@@ -120,46 +123,31 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Homepage</a>
+                            <a class="nav-link active" aria-current="page" href="#">ANIME-MANGA</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">ANIME-MANGA</a>
-                        </li>
-                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#">GAMES</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">WRITER’s PEN</a>
-                        </li> -->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">LIST-BOARD</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">RECORD</a>
+                            <a class="nav-link" href="record.html">RECORD</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">AUTHORS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">QUESTIONNAIRE</a>
+                            <a class="nav-link" href="questionnaire.html">QUESTIONNAIRE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">GALLERY</a>
+                            <a class="nav-link" href="gallery.html">GALLERY</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">MAGAZINE</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">USER PROFILE</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">READING SECTION</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">EDIT USER PROFILE</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">SIGNUP</a>
                         </li>
                     </ul>
                     <div class="side-social">
@@ -214,7 +202,7 @@
     <!-- <div class="progress">
         <a id="button" class="arrow-top"><i class="las la-arrow-up"></i></a>
     </div> -->
-    <section class="inner-banner justify-content-center align-items-center d-flex" style="background-image: url('assets/img/img1.jpg');">
+    <section class="inner-banner justify-content-center align-items-center d-flex">
         <div class="banner-picture">
           <img src="assets/img/banner.jpeg" alt="">
         </div>
@@ -225,148 +213,151 @@
           </p>    
         </div>
       </section>
-    <section class="mt-4">
+      
+    <section class="mt-4 mt-lg-5">
         <div class="container-xl">
             <div class="row gx-lg-3">
-                <div class="col-12 col-lg-7 mb-3">
+                <div class="col-12 col-lg-7 mb-3 outer-owl mb-xl-0">
                     <div class="owl-landing owl-blog owl-carousel owl-theme arrow-hover">
                         <div class="item" style="background-image: url('assets/img/img1.jpg')">
+                            <div class="content-position content-position-blog">
+                                <p>Anime</p>
+                                <h2><a href="blog-detail.html" class="btn-link">Short Vs Long Term Rentals In Hong Kong: Which Suits You Best?</a></h2>
+                                <div>
+                                    <p><span>18 days ago</span>
+                                        <span>•</span>
+                                        <span>4 min read</span>
+                                    </p>
+                                </div>
+                            </div>
                             <!-- <img src="assets/img/img1.jpg" alt=""> -->
                         </div>
-                        <div class="item" style="background-image: url('assets/img/img2.jpg')">
-                            <!-- <img src="assets/img/img2.jpg" alt=""> -->
-                        </div>
-                        <div class="item" style="background-image: url('assets/img/img3.jpg')">
-                            <!-- <img src="assets/img/img3.jpg" alt=""> -->
-                        </div>
-                        <div class="item" style="background-image: url('assets/img/img4.jpg')">
-                            <!-- <img src="assets/img/img4.jpg" alt=""> -->
-                        </div>
+                        
                     </div>
                 </div>
-                <div class="col-12 col-lg-5 mb-3">
-                    <div class="article card">
+                <div class="col-12 col-lg-5 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
                         <div class="article-img mb-2" >
                             <img src="assets/img/04.jpg" alt="" class="img-fluid" />
                         </div>
                         <div class="article-detail p-3">
                             <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
                             <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                            <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
-                    </div>
+                      </a>
                 </div>
             </div>
             <div class="row gx-lg-3">
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="article card">
+                <div class="col-lg-4 col-sm-6 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
                         <div class="article-img mb-2" >
                             <img src="assets/img/04.jpg" alt="" class="img-fluid" />
                         </div>
                         <div class="article-detail p-3">
                             <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
                             <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
-                    </div>
+                      </a>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="article card">
+                <div class="col-lg-4 col-sm-6 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
                         <div class="article-img mb-2" >
                             <img src="assets/img/04.jpg" alt="" class="img-fluid" />
                         </div>
                         <div class="article-detail p-3">
                             <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
                             <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
-                    </div>
+                      </a>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="article card">
+                <div class="col-lg-4 col-sm-6 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
                         <div class="article-img mb-2" >
                             <img src="assets/img/04.jpg" alt="" class="img-fluid" />
                         </div>
                         <div class="article-detail p-3">
                             <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
                             <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
-                    </div>
-                </div>
-            
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="article card">
-                        <div class="article-img mb-2" >
-                            <img src="assets/img/04.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="article-detail p-3">
-                            <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
-                            <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="article card">
-                        <div class="article-img mb-2" >
-                            <img src="assets/img/04.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="article-detail p-3">
-                            <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
-                            <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="article card">
-                        <div class="article-img mb-2" >
-                            <img src="assets/img/04.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="article-detail p-3">
-                            <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
-                            <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                        </div>
-                    </div>
+                      </a>
                 </div>
             
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="article card">
+                <div class="col-lg-4 col-sm-6 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
                         <div class="article-img mb-2" >
                             <img src="assets/img/04.jpg" alt="" class="img-fluid" />
                         </div>
                         <div class="article-detail p-3">
                             <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
                             <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
-                    </div>
+                      </a>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="article card">
+                <div class="col-lg-4 col-sm-6 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
                         <div class="article-img mb-2" >
                             <img src="assets/img/04.jpg" alt="" class="img-fluid" />
                         </div>
                         <div class="article-detail p-3">
                             <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
                             <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
-                    </div>
+                      </a>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="article card">
+                <div class="col-lg-4 col-sm-6 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
                         <div class="article-img mb-2" >
                             <img src="assets/img/04.jpg" alt="" class="img-fluid" />
                         </div>
                         <div class="article-detail p-3">
                             <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
                             <small>12, july 2022</small> <br>
-                            <a class="btn-link mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
-                    </div>
+                      </a>
+                </div>
+            
+                <div class="col-lg-4 col-sm-6 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
+                        <div class="article-img mb-2" >
+                            <img src="assets/img/04.jpg" alt="" class="img-fluid" />
+                        </div>
+                        <div class="article-detail p-3">
+                            <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
+                            <small>12, july 2022</small> <br>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                      </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
+                        <div class="article-img mb-2" >
+                            <img src="assets/img/04.jpg" alt="" class="img-fluid" />
+                        </div>
+                        <div class="article-detail p-3">
+                            <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
+                            <small>12, july 2022</small> <br>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                      </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-3 outer-card mb-lg-0">
+                    <a href="blog-detail.html" class="article card">
+                        <div class="article-img mb-2" >
+                            <img src="assets/img/04.jpg" alt="" class="img-fluid" />
+                        </div>
+                        <div class="article-detail p-3">
+                            <div class="d-inline-block badge bg-success mb-0 fw-normal ">Games</div> <br>
+                            <small>12, july 2022</small> <br>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                      </a>
                 </div>
             </div>
         </div>
@@ -418,7 +409,7 @@
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">RECORD</a>
+                      href="record.html">RECORD</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
@@ -426,11 +417,11 @@
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">QUESTIONNAIRE</a>
+                      href="questionnaire.html">QUESTIONNAIRE</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">GALLERY</a>
+                      href="gallery.html">GALLERY</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a

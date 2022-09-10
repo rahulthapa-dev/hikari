@@ -24,11 +24,16 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <!-- gallery page -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/prettyphoto/3.1.6/css/prettyPhoto.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
 </head>
 <body>
     <nav  id="header" class="navbar navbar-expand-xl headroom header-custom" aria-label="navbar">
         <div class="container-fluid">
-          <a class="d-none navbar-brand d-md-flex align-items-end hikari-logo order-2 order-xl-1" href="#">
+          <a class="d-none navbar-brand d-md-flex align-items-end hikari-logo order-2 order-xl-1" href="index.html">
             <svg width="50" height="55" viewBox="0 0 721 768" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M721 0H0V768H721V0ZM680.5 42H45.5V724H680.5V42Z"
                   fill="currentColor" />
@@ -38,7 +43,9 @@
               </svg>
               <span class="ms-2"><span class="text-red">Hikari</span> <br/>Scripts</span>
           </a>
-          
+          <a class="d-inline-block navbar-brand text-center me-0 d-md-none align-items-end hikari-logo order-2 order-xl-1" href="index.html">
+            <span class=""><span class="text-red">Hikari</span>Scripts</span>
+          </a>
             <div class="d-inline-flex align-items-center order-3">
                 <div class="d-inline-block me-1">
                     <input type="checkbox" class="checkbox" id="checkbox">
@@ -70,7 +77,7 @@
             <button class=" btn-offcanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#leftOffcanvas" aria-controls="leftOffcanvas">
                 <i class="las la-ellipsis-v"></i>
             </button>
-            <button data-bs-toggle="offcanvas" data-bs-target="#filterHead" aria-controls="filterHead" class="filter-head btn btn-primary-soft order-2 d-inline-block d-md-none">Filter</button>
+            <button data-bs-toggle="offcanvas" data-bs-target="#filterHead" aria-controls="filterHead" class="filter-head btn btn-primary-soft order-2 d-inline-block d-md-none"><i class="las la-filter"></i></button>
           </div>
             <div class="collapse navbar-collapse order-2" id="hikari">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
@@ -87,16 +94,16 @@
                         <a class="nav-link" href="#">LIST-BOARD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">RECORD</a>
+                        <a class="nav-link" href="record.html">RECORD</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">AUTHORS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">QUESTIONNAIRE</a>
+                        <a class="nav-link" href="questionnaire.html">QUESTIONNAIRE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GALLERY</a>
+                        <a class="nav-link" href="gallery.html">GALLERY</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">MAGAZINE</a>
@@ -113,7 +120,7 @@
     <!-- off canvas -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="leftOffcanvas" aria-labelledby="leftOffcanvasLabel">
         <div class="offcanvas-header">
-            <a class="navbar-brand d-flex align-items-end hikari-logo" href="#">
+            <a class="navbar-brand d-flex align-items-end hikari-logo" href="index.html">
                 <svg width="50" height="55" viewBox="0 0 721 768" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M721 0H0V768H721V0ZM680.5 42H45.5V724H680.5V42Z"
                       fill="currentColor" />
@@ -130,17 +137,14 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Homepage</a>
+                  <a class="nav-link active" aria-current="page" href="#">ANIME-MANGA</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">ANIME-MANGA</a>
-              </li>
-              <!-- <li class="nav-item">
                   <a class="nav-link" href="#">GAMES</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#">WRITER’s PEN</a>
-              </li> -->
+              </li>
               <li class="nav-item">
                   <a class="nav-link" href="#">LIST-BOARD</a>
               </li>
@@ -158,18 +162,6 @@
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#">MAGAZINE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">USER PROFILE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">READING SECTION</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">EDIT USER PROFILE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">SIGNUP</a>
               </li>
           </ul>
           <div class="side-social">
@@ -246,75 +238,12 @@
     <section class="py-5">
         <div class="container-custom">
           <div class="row">
+            <div class="col-12">
+              <!--  loader -->
+              <div class="loading w-100 text-center">Loading</div>
+            </div>
             <div class="col-12 d-flex">
-              <div id="filterHead" class="card card-filter">
-                <div class="d-flex justify-content-between mb-3">
-                  <h4 class="mb-0">Filter</h4>
-                  <button type="button" class="btn-close text-reset d-block d-md-none" data-bs-dismiss="offcanvas" aria-label="Close">
-                    <i class=""></i>
-                  </button>
-                </div>
-                <div class="mb-3">
-                  <p><b>Categories</b></p>
-                  <div>
-                    <div class="form-check">
-                      <input class="form-check-input" name="catergory[1][]" type="checkbox" value="" id="Anime">
-                      <label class="form-check-label" for="Anime">
-                        Anime
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" name="catergory[1][]" type="checkbox" value="" id="Game">
-                      <label class="form-check-label" for="Game">
-                        Games
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" name="catergory[1][]" type="checkbox" value="" id="Manga">
-                      <label class="form-check-label" for="Manga">
-                        Manga
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" name="catergory[1][]" type="checkbox" value="" id="Writer">
-                      <label class="form-check-label" for="Writer">
-                        Writer's Pen
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <p><b>Sub Categories</b></p>
-                  <div>
-                    <div class="form-check">
-                      <input class="form-check-input" name="catergory[2][]"  type="checkbox" value="" id="Elden">
-                      <label class="form-check-label" for="Elden">
-                        Elden Ring
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" name="catergory[2][]" type="checkbox" value="" id="Genshin">
-                      <label class="form-check-label" for="Genshin">
-                        Genshin Impact
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" name="catergory[2][]" type="checkbox" value="" id="GTA">
-                      <label class="form-check-label" for="GTA">
-                        GTA 5
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" name="catergory[2][]" type="checkbox" value="" id="Nier">
-                      <label class="form-check-label" for="Nier">
-                        Nier
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <a href="" class="btn btn-primary-soft justify-content-center">Filter</a>
-              </div>
-              <div class="card-content text-center">
+              <div class="d-block text-center w-100">
                 <div class="btn-group btn-group-justified filter-button-group d-inline-block mx-auto" role="group" aria-label="filterImages">
                   <div class="btn-group" role="group">
                       <button type="button" class="btn btn-default" data-filter=".anime">Anime</button>
@@ -331,247 +260,248 @@
                 </div>  
                 <div class="grid">
                   <div class="grid-sizer col-xs-12 col-sm-6 col-md-4 col-xl-3 col-lg-4"></div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item anime">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Venice_USA_jc7bsq.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Venice_USA_jc7bsq.jpg" alt="Venice beach, California.">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Venice_USA_jc7bsq.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item anime">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Venice_USA_jc7bsq.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Venice_USA_jc7bsq.jpg" alt="Venice beach, California.">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item games">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247984/_DSC2757_uztioi.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247984/_DSC2757_uztioi.jpg" alt="Aurora over Svalbard archipelago, Norway.">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247984/_DSC2757_uztioi.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item games">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247984/_DSC2757_uztioi.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247984/_DSC2757_uztioi.jpg" alt="Aurora over Svalbard archipelago, Norway.">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item games">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247785/DSCF2474_hjhodu.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247785/DSCF2474_hjhodu.jpg" alt="Flying around Mt. Everest, Nepal.">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247785/DSCF2474_hjhodu.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item games">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247785/DSCF2474_hjhodu.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247785/DSCF2474_hjhodu.jpg" alt="Flying around Mt. Everest, Nepal.">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item anime">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228326/Polar_night_in_Longyearbyen_Svalbard_bgq55i.jpg" rel="prettyPhoto[portfolio]">
-                    <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228326/Polar_night_in_Longyearbyen_Svalbard_bgq55i.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228326/Polar_night_in_Longyearbyen_Svalbard_bgq55i.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item anime">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228326/Polar_night_in_Longyearbyen_Svalbard_bgq55i.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228326/Polar_night_in_Longyearbyen_Svalbard_bgq55i.jpg" alt="">
+                        </a>
+                        <a href="#" class="position-absolute img-credit">
+                          Pixabay
+                        </a>
+                        
+                        <a href="#" class="img-btn position-absolute img-download">
+                          <i class="las la-download"></i>
+                        </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item anime">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Mosque_in_Samarkand_Uzbekistan_ym9kzo.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Mosque_in_Samarkand_Uzbekistan_ym9kzo.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Mosque_in_Samarkand_Uzbekistan_ym9kzo.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item anime">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Mosque_in_Samarkand_Uzbekistan_ym9kzo.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/Mosque_in_Samarkand_Uzbekistan_ym9kzo.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item anime">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/In_a_dessert_Southern_Kazakhstan_ylwjbl.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/In_a_dessert_Southern_Kazakhstan_ylwjbl.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/In_a_dessert_Southern_Kazakhstan_ylwjbl.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item anime">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/In_a_dessert_Southern_Kazakhstan_ylwjbl.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228325/In_a_dessert_Southern_Kazakhstan_ylwjbl.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item manga">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Ho_Chi_Mihn_Vietnam_jwdqxd.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Ho_Chi_Mihn_Vietnam_jwdqxd.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Ho_Chi_Mihn_Vietnam_jwdqxd.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item manga">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Ho_Chi_Mihn_Vietnam_jwdqxd.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Ho_Chi_Mihn_Vietnam_jwdqxd.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item games">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Wellington_New_Zealand_cwvqfz.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Wellington_New_Zealand_cwvqfz.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Wellington_New_Zealand_cwvqfz.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item games">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Wellington_New_Zealand_cwvqfz.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228324/Wellington_New_Zealand_cwvqfz.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item anime">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Mangawhai_New_Zealand_ftmvhv.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Mangawhai_New_Zealand_ftmvhv.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Mangawhai_New_Zealand_ftmvhv.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item anime">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Mangawhai_New_Zealand_ftmvhv.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Mangawhai_New_Zealand_ftmvhv.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item anime">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_2_bwxicu.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_2_bwxicu.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_2_bwxicu.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item anime">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_2_bwxicu.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_2_bwxicu.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item writer">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Kuan_Yin_Thong_Hood_Cho_Temple_Penang_e6vys6.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Kuan_Yin_Thong_Hood_Cho_Temple_Penang_e6vys6.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Kuan_Yin_Thong_Hood_Cho_Temple_Penang_e6vys6.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item writer">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Kuan_Yin_Thong_Hood_Cho_Temple_Penang_e6vys6.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Kuan_Yin_Thong_Hood_Cho_Temple_Penang_e6vys6.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item anime">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_4_u11nld.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_4_u11nld.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_4_u11nld.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item anime">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_4_u11nld.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_4_u11nld.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item anime">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_3_ghuumw.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_3_ghuumw.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_3_ghuumw.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item anime">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_3_ghuumw.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_3_ghuumw.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item games">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC3321_copy_rzjopt.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC3321_copy_rzjopt.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC3321_copy_rzjopt.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item games">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC3321_copy_rzjopt.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC3321_copy_rzjopt.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item anime">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_1_cezblk.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_1_cezblk.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_1_cezblk.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item anime">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_1_cezblk.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464228323/Wellington_New_Zealand_1_cezblk.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item games">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC1457_cdoncu.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC1457_cdoncu.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC1457_cdoncu.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item games">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC1457_cdoncu.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247813/_DSC1457_cdoncu.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3 grid-item games">
-                    <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247786/DSCF2489_iz6wkx.jpg" rel="prettyPhoto[portfolio]">
-                      <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247786/DSCF2489_iz6wkx.jpg" alt="">
-                    </a>
-                    <a href="#" class="position-absolute img-credit">
-                      Pixabay
-                    </a>
-                    <a  href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247786/DSCF2489_iz6wkx.jpg" rel="prettyPhoto[portfolio]" class="img-btn position-absolute img-expand image-link">
-                      <i class="las la-expand-arrows-alt"></i>
-                    </a>
-                    <a href="#" class="img-btn position-absolute img-download">
-                      <i class="las la-download"></i>
-                    </a>
+                  <div class="grid-item games">
+                    <div>
+                      <a class="with-caption image-link" href="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247786/DSCF2489_iz6wkx.jpg" rel="prettyPhoto[portfolio]">
+                        <img class="thumbnail img-responsive" src="https://res.cloudinary.com/debtiw4tn/image/upload/v1464247786/DSCF2489_iz6wkx.jpg" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/" target="_blank" class="position-absolute img-credit">
+                        Pixabay
+                      </a>
+                      
+                      <a href="#" class="img-btn position-absolute img-download">
+                        <i class="las la-download"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
     </section>
@@ -622,7 +552,7 @@
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">RECORD</a>
+                      href="record.html">RECORD</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
@@ -630,11 +560,11 @@
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">QUESTIONNAIRE</a>
+                      href="questionnaire.html">QUESTIONNAIRE</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
-                      href="#">GALLERY</a>
+                      href="gallery.html">GALLERY</a>
                   </li>
                   <li id="menu-item-25418"
                     class="menu-item menu-item-type-taxonomy menu-item-object-blog_type menu-item-25418"><a
@@ -689,16 +619,14 @@
           </div>
         </section>
     </footer>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
     <script src="assets/owl/js/owl.carousel.min.js"></script>
     <script src="assets/aos/aos.js"></script>
     <script src="assets/js/jQuery.headroom.js"></script>
     <script src="assets/js/headroom.js"></script>
     <!-- gallery page -->
-    <script src="https://npmcdn.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/prettyphoto/3.1.6/js/jquery.prettyPhoto.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    
+    
     <!-- gallery page js-->
     <script src="assets/js/custom.js"></script>
     <script>
